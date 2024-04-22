@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+/*タイトルとメニュー*/
+header {
+  max-width: 960px;
+  padding-top: 15px;
+  padding-right: 100px;
+  width: 70%;
+  margin: 0 auto;
+  display: flex; /*タイトルとメニューを横並び*/
+}
+
+/*タイトルの文字*/
+.header .container {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/*メニュー部分*/
+ul {
+  width: 20%;
+  margin: 50px auto;
+  display: flex; /*横並び*/
+  font-size: 20px;
+  color: #282828;
+  margin: 0 auto;
+  align-items: center;
+  white-space: nowrap;
+}
+
+/*各メニュー*/
+li {
+  margin-left: 20%;
+  margin-right: 0 auto;
+  display: flex;
+  font-size: 10px;
+  color: #282828;
+  padding: 0;
+  width: 30%;
+}
+
+/*メニューの間の実線*/
+.menu li + li {
+  border-left: 1px solid;
+  padding: 0 20px 0 20px;
+  flex-grow: 1;
+}
+
+.menu .border1 {
+  margin: 0 auto;
+  display: flex; /*横並び*/
+  align-items: center;
+  height: 20px;
+  padding: 0 20px;
+}
+
+.menu .border2 {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: 20px;
+  padding: 0 20px;
+}
+
+.menu .border3 {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: 20px;
+  padding: 0 20px;
+}
+
+.menu .border4 {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: 20px;
+  padding: 0 20px;
+}
+
+.menu .border5 {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: 20px;
+  padding: 0 20px;
+}
