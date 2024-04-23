@@ -1,42 +1,38 @@
 @charset "utf-8";
 
-header {
-  max-width: 960px;
-  padding-top: 15px;
-  padding-right: 10px;
-  width: 90%;
-  display: flex;
-}
+/*疑問点書いています*/
 
-.header div {
-  font-size: 20px;
-  font-weight: bold;
-  align-items: center;
-}
-
-ul {
-  width: 20%;
-  margin: 50px auto;
+.header {
+  /*header{}なのか、header .header{}なのか分からない*/
+  margin: 20px 50px;
+  max-width: 1000px;
   display: flex;
-  font-size: 20px;
-  color: #282828;
-  margin: 0 auto;
-  align-items: center;
   white-space: nowrap;
 }
 
+.header div {
+  font-size: 30px;
+  font-weight: bold;
+  align-items: center;
+  margin: 0 auto;
+}
+
+ul {
+  display: flex;
+  margin: 0px auto;
+  white-space: nowrap;
+  align-items: center;
+}
+
 li {
-  margin-left: 20%;
   margin-right: 0 auto;
   display: flex;
-  font-size: 10px;
+  font-size: 15px;
   color: #282828;
-  padding: 0;
-  width: 30%;
 }
 
 .menu li + li {
-  border-left: 1px solid;
+  border-left: 1px solid; /*線が短い*/
   padding: 0 20px 0 20px;
   flex-grow: 1;
 }
@@ -84,85 +80,76 @@ li {
 @media screen and (max-width: 767px) {
   .header {
     flex-direction: column;
+    margin: 0;
   }
+
   .header div {
     padding-top: 20px;
-    margin-left: 20px;
-    font-size: 40px;
+    margin: 5px;
+    font-size: 25px;
     font-weight: bold;
   }
 
   .menu {
-    font-size: 40px;
     padding: 5px;
-    width: 100%;
+    padding-top: 0px;
     display: block;
-    color: #282828;
     font-weight: lighter;
-    margin-left: 0;
-    text-align: left;
+    margin: 0;
   }
   .menu li + li {
-    border-left: none; /*なぜこれを書かないと767px以下のサイズで縦線が消えないかがわからない*/
+    border-left: none;
+    white-space: nowrap;
   }
 
   /*メニューの文字を線の先頭に揃えられないのはなぜ？*/
   /*メニューの文字と線の間が広くならない*/
   .menu .border1 {
     border-bottom: 1px solid #282828;
-    width: 540px;
-    margin: 10px;
+    width: 250px; /*px数がわからない。適当値にしている*/
+    margin: 0px;
     display: flex;
-    font-size: 20px;
+    font-size: 10px;
     height: 20px;
     padding: 5px;
   }
 
-  /*メニューの文字を線の先頭に揃えられないのはなぜ？*/
-  /*メニューの文字と線の間が広くならない*/
   .menu .border2 {
     border-bottom: 1px solid #282828;
-
-    width: 540px;
-    margin: 10px;
+    width: 250px;
+    margin: 0px;
     display: flex;
-    font-size: 20px;
+    font-size: 10px;
     height: 20px;
     padding: 5px;
   }
 
-  /*メニューの文字を線の先頭に揃えられないのはなぜ？*/
-  /*メニューの文字と線の間が広くならない*/
   .menu .border3 {
     border-bottom: 1px solid #282828;
-    width: 540px;
-    margin: 10px;
+    width: 250px;
+    margin: 0px;
     display: flex;
-    font-size: 20px;
+    font-size: 10px;
     height: 20px;
     padding: 5px;
   }
 
-  /*メニューの文字を線の先頭に揃えられないのはなぜ？*/
-  /*メニューの文字と線の間が広くならない*/
   .menu .border4 {
     border-bottom: 1px solid #282828;
-    width: 540px;
-    margin: 10px;
+    width: 250px;
+    margin: 0px;
     display: flex;
-    font-size: 20px;
+    font-size: 10px;
     height: 20px;
     padding: 5px;
   }
 
-  /*メニューの文字を線の先頭に揃えられないのはなぜ？*/
-  /*メニューの文字と線の間が広くならない*/
   .menu .border5 {
     border-bottom: 1px solid #282828;
-    width: 540px;
-    margin: 10px;
+    width: 250px;
+    margin: 0px;
     display: flex;
-    font-size: 20px;
+    font-size: 10px;
     height: 20px;
     padding: 5px;
   }
