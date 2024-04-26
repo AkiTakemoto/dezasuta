@@ -31,45 +31,13 @@ li {
   color: #282828;
 }
 
-.menu li + li {
+.border li + li {
   border-left: 1px solid; /*線が短い*/
   padding: 0 20px 0 20px;
   flex-grow: 1;
 }
 
-.menu .border1 {
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  height: 20px;
-  padding: 0 20px;
-}
-
-.menu .border2 {
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  height: 20px;
-  padding: 0 20px;
-}
-
-.menu .border3 {
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  height: 20px;
-  padding: 0 20px;
-}
-
-.menu .border4 {
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  height: 20px;
-  padding: 0 20px;
-}
-
-.menu .border5 {
+.border {
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -90,67 +58,23 @@ li {
     font-weight: bold;
   }
 
-  .menu {
-    padding: 5px;
-    padding-top: 0px;
+  ul.border {
+    margin: 10px 10px;
+  }
+  .border {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 5px 0;
+    padding-top: 10px;
     display: block;
     font-weight: lighter;
     margin: 0;
+    border-bottom: 1px solid #282828;
+    font-size: 10px;
+    width: 90%;
   }
-  .menu li + li {
+  .border li + li {
     border-left: none;
     white-space: nowrap;
-  }
-
-  /*メニューの文字を線の先頭に揃えられないのはなぜ？*/
-  /*メニューの文字と線の間が広くならない*/
-  .menu .border1 {
-    border-bottom: 1px solid #282828;
-    width: 250px; /*px数がわからない。適当値にしている*/
-    margin: 0px;
-    display: flex;
-    font-size: 10px;
-    height: 20px;
-    padding: 5px;
-  }
-
-  .menu .border2 {
-    border-bottom: 1px solid #282828;
-    width: 250px;
-    margin: 0px;
-    display: flex;
-    font-size: 10px;
-    height: 20px;
-    padding: 5px;
-  }
-
-  .menu .border3 {
-    border-bottom: 1px solid #282828;
-    width: 250px;
-    margin: 0px;
-    display: flex;
-    font-size: 10px;
-    height: 20px;
-    padding: 5px;
-  }
-
-  .menu .border4 {
-    border-bottom: 1px solid #282828;
-    width: 250px;
-    margin: 0px;
-    display: flex;
-    font-size: 10px;
-    height: 20px;
-    padding: 5px;
-  }
-
-  .menu .border5 {
-    border-bottom: 1px solid #282828;
-    width: 250px;
-    margin: 0px;
-    display: flex;
-    font-size: 10px;
-    height: 20px;
-    padding: 5px;
   }
 }
