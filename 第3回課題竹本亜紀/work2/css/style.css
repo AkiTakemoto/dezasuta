@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+/*疑問点は『疑問：』と書いています*/
+
+body {
+  background-color: #eeeeee;
+  max-width: 960px;
+}
+
+header {
+  /*疑問：中央揃えにならない*/
+  max-width: 960px;
+  text-align: center;
+  white-space: nowrap;
+  color: darkgreen;
+  font-weight: bold;
+  font-size: 25px;
+  background-color: right gray;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+ul {
+  margin: 0 auto;
+  display: flex;
+  max-width: 30%;
+  max-width: 960px;
+}
+
+img {
+  padding: 0 10px;
+}
+
+.box {
+  background-color: white;
+  padding: 5px;
+  max-width: 350px;
+}
+
+.flexbox_text {
+  width: 330px;
+  padding: 0px;
+  background-color: white;
+  margin: 0px 10px;
+  max-width: 350px;
+}
+
+h1 {
+  width: 400px;
+  padding: 3px;
+  font-size: 20px;
+  margin: 0px 10px;
+  margin-bottom: 5px;
+  color: darkgreen;
+  border-left: 8px solid darkgreen;
+}
+p {
+  background-color: white;
+  font-size: 14px;
+  max-width: 350px;
+  margin: 0;
+  line-height: 20px; /*メモ：行間を広げる*/
+  padding: 5px 10px 10px 10px;
+}
+
+@media screen and (max-width: 400px) {
+  .flexbox_header {
+    /*疑問：中央揃えにならない*/
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  img {
+    width: 100%;
+  }
+  .flexbox_text {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .box {
+    max-width: 400px;
+  }
+
+  ul {
+    flex-direction: column;
+  }
+
+  p {
+    margin: 0px 0px 15px 0px;
+    max-width: 400px;
+    padding: 5px 10px 10px 10px;
+  }
+}
