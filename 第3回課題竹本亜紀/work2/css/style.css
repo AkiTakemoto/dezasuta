@@ -1,15 +1,12 @@
 @charset "utf-8";
 
-/*疑問点は『疑問：』と書いています*/
-
 body {
   background-color: #eeeeee;
-  max-width: 960px;
+  max-width: 960px; /*親要素だけでよい*/
+  margin: 0 auto; /*親要素につけると中央配置になる*/
 }
 
-header {
-  /*疑問：中央揃えにならない*/
-  max-width: 960px;
+h2 {
   text-align: center;
   white-space: nowrap;
   color: darkgreen;
@@ -23,74 +20,49 @@ header {
 ul {
   margin: 0 auto;
   display: flex;
-  max-width: 30%;
-  max-width: 960px;
+  justify-content: space-between;
+  padding: 0px 5px;
 }
 
-img {
-  padding: 0 10px;
-}
-
-.box {
+/*liに画像もh3もテキストもまとめる！*/
+li {
+  width: 32%;
+  margin: 0 10px;
   background-color: white;
-  padding: 5px;
-  max-width: 350px;
 }
 
-.flexbox_text {
-  width: 330px;
-  padding: 0px;
-  background-color: white;
-  margin: 0px 10px;
-  max-width: 350px;
-}
-
-h1 {
-  width: 400px;
-  padding: 3px;
+h3 {
   font-size: 20px;
   margin: 0px 10px;
   margin-bottom: 5px;
   color: darkgreen;
   border-left: 8px solid darkgreen;
+  margin-top: 10px;
 }
 p {
-  background-color: white;
   font-size: 14px;
-  max-width: 350px;
-  margin: 0;
   line-height: 20px; /*メモ：行間を広げる*/
   padding: 5px 10px 10px 10px;
 }
 
 @media screen and (max-width: 400px) {
-  .flexbox_header {
-    /*疑問：中央揃えにならない*/
+  h1 {
     padding-top: 40px;
     padding-bottom: 40px;
     width: 100%;
     max-width: 400px;
   }
+  li {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
 
   img {
-    width: 100%;
-  }
-  .flexbox_text {
-    width: 100%;
-    max-width: 400px;
-  }
-
-  .box {
-    max-width: 400px;
+    width: 100%; /*画像100%に広げる*/
   }
 
   ul {
     flex-direction: column;
-  }
-
-  p {
-    margin: 0px 0px 15px 0px;
-    max-width: 400px;
-    padding: 5px 10px 10px 10px;
   }
 }
