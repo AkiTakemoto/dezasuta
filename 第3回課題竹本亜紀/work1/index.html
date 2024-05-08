@@ -15,14 +15,13 @@
         for (let i = 0; i < 11; i++) {
             num += i;//調べた結果これで合っていると思うが、なぜ+=と書くのかピンとこない//
 
-
-            if (num > 20) {
-                console.log('20以上')
-                console.log("numの値" + num)
-            } if (num < 20) {
-                console.log('20未満')
-                console.log("numの値" + num)
-            }
+        }
+        if (num >= 20) {
+            console.log('20以上')
+            console.log("numの値" + num)
+        } else if (num < 20) {
+            console.log('20未満')
+            console.log("numの値" + num)
         }
 
 
