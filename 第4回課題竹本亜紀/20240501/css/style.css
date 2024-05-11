@@ -79,33 +79,30 @@ body {
   width: 100%;
   box-sizing: border-box;
 }
-/*headerここまで*/
+/*疑問１：前回添削いただいた動画の最後にヘッダーが崩れている
+とご指摘いただきましたが、私のPCでは崩れた箇所が分からなかったです*/
 
-/*メイン共通*/
-.img h3 {
-  height: 53px;
-  padding: 10px;
+/*headerここまで*/
+main {
+  max-width: 1920px;
 }
 
 /*メイントップエリア*/
+/*疑問：mainをpタグに変えたら大きさや余白を
+指定できなくなってしまいました*/
+
 .main_top {
   text-align: center;
   max-width: 1920px;
   margin-top: 107px;
 }
 
-.main_logo {
-  width: 100px;
-  white-space: nowrap;
-}
-
-.main_top sup {
+.font_size_1 p {
   font-size: 30px;
-
   white-space: nowrap;
   font-weight: 100;
 }
-.main_top h2 {
+.font_size_2 p {
   font-size: 82px;
   line-height: 1.17;
   padding: 58px;
@@ -113,7 +110,7 @@ body {
   font-weight: 300;
 }
 
-.main_top p {
+.font_size_3 p {
   font-size: 23px;
   white-space: nowrap;
   padding-bottom: 102px;
@@ -122,43 +119,68 @@ body {
 }
 
 /*ABOUT USエリア*/
+
+/*疑問３：タイトル画像が画面の真ん中に配置ができないです
+以下のセクションも同様です*/
+/*疑問４：タイトル画像だけでなく
+セクション全体も中央に配置することができないです
+*/
+
+.about_us_title_img {
+  max-width: 500px;
+  max-height: 560px;
+  border-bottom-right-radius: 82px;
+}
+
+.about_us_logo {
+  height: 78px;
+  white-space: nowrap;
+  padding-left: 81px;
+}
+
 .about_us ul {
   display: flex;
+  max-width: 1920px;
+  margin: 0 auto;
 }
-.about_container li {
+.about_us li {
   white-space: nowrap;
 }
 
-.about_us img {
-  object-fit: cover;
-  max-width: 500px;
-  max-height: 560px;
-}
-
-.about_us h4 {
+.about_us h3 {
   font-size: 44px;
   line-height: 1.38;
   white-space: nowrap;
   font-weight: 200;
+  padding-left: 81px;
+  margin-top: 61px;
+  margin-bottom: 44px;
 }
 
 .about_us p {
   font-size: 16px;
   line-height: 1.62;
   white-space: nowrap;
+  padding-left: 81px;
+  font-feature-settings: "palt";
 }
 
 /*MENUエリア*/
+.menu_title_logo {
+  height: 78px;
+  white-space: nowrap;
+  display: flex;
 
-.menu h4 {
-  color: #d30202;
-  font-size: 38px;
-  font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
-    "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
-    "ＭＳ 明朝", serif;
-  font-weight: lighter;
-  margin-top: 0;
-  margin-bottom: 0;
+  width: auto;
+  padding-top: 110px;
+  padding-bottom: 50px;
+}
+
+.menu_img {
+  max-width: 300px;
+  max-height: 200px;
+  border-top-right-radius: 42px;
+  margin: 0 auto;
 }
 
 .menu ul {
@@ -172,9 +194,35 @@ body {
 
 li:last-child {
   padding: 10px;
+  padding-top: 0;
+}
+
+.menu h3 {
+  /*画像に文字が載るのはまだやっておらずこれからです*/
+  color: #d30202;
+  font-size: 38px;
+  font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+    "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+    "ＭＳ 明朝", serif;
+  font-weight: lighter;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.menu p {
+  font-feature-settings: "palt";
+  font-size: 17px;
+  line-height: 1.4;
 }
 
 /*GARRERYエリア*/
+.gallery_title_logo {
+  height: 78px;
+  white-space: nowrap;
+  padding-top: 110px;
+  padding-bottom: 27px;
+}
+
 .gallery ul {
   display: flex;
   justify-content: space-between;
@@ -186,36 +234,64 @@ li:last-child {
 }
 
 /*EVENTエリア*/
+
+/*疑問５：枠の大きさを横幅1000pxにしたいのにできないです*/
+/*疑問６：画面を縮めると崩れてしまいます*/
+/*疑問７：ddに文字間の余白を付けると
+下線も文字から離れてしまいます*/
+.event_title_logo {
+  height: 78px;
+  white-space: nowrap;
+  display: block;
+  padding-top: 110px;
+  padding-bottom: 47px;
+}
+
 dl {
   background-color: white;
   display: flex;
   flex-wrap: wrap;
+  width: fit-content;
   border: solid 3px #4f260b;
-  padding: 40px 100px;
+  font-size: 23px;
+  padding-top: 44px;
+  padding: 44px;
+  max-width: 1000px;
+  max-height: 200px;
 }
 dl dt {
-  width: 40%;
   white-space: nowrap;
 }
-dl dd {
-  width: 40%;
+
+dt {
+  padding-left: 160px;
+  padding-right: 60px;
 }
+
 dd {
-  width: 60%;
+  padding-left: 0;
+  font-size: 23px;
   border-bottom: 2px solid #4f260b;
-  display: inline;
   white-space: nowrap;
 }
 
 /*ACCESSエリア*/
+.access_title_logo {
+  height: 78px;
+  white-space: nowrap;
+  padding-top: 110px;
+  padding-bottom: 47px;
+}
+
 iframe {
-  display: block; /*地図の隙間を埋める*/
-  width: 100%;
+  display: block;
+  width: 1920px;
   height: 472px;
 }
 /*フッターエリア*/
 footer {
   background-color: white;
+  width: 1920px;
 }
 footer ul {
   display: flex;
@@ -225,5 +301,16 @@ footer ul {
 
 .footer_logo {
   width: 218px;
-  padding: 0 45px;
+  padding: 0 45px 273px 462px;
+}
+footer a {
+  position: fixed;
+  padding: 38px;
+  right: 310px;
+  bottom: 230px;
+  width: 128px;
+}
+
+.copyright {
+  text-align: center;
 }
