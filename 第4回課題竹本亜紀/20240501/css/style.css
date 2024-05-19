@@ -97,12 +97,12 @@ main {
   margin-top: 107px;
 }
 
-.font_size_1 p {
+.font_size_1 {
   font-size: 30px;
   white-space: nowrap;
   font-weight: 100;
 }
-.font_size_2 p {
+.font_size_2 {
   font-size: 82px;
   line-height: 1.17;
   padding: 58px;
@@ -110,7 +110,7 @@ main {
   font-weight: 300;
 }
 
-.font_size_3 p {
+.font_size_3 {
   font-size: 23px;
   white-space: nowrap;
   padding-bottom: 102px;
