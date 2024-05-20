@@ -1,0 +1,781 @@
+@charset "utf-8";
+
+/* cssリセット */
+
+/*利用するタグによってこちらの内容は増やす*/
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  /*デフォルトの文字色、font-familyを予め当てておく*/
+  color: #4f260b;
+  font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+    "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+    "ＭＳ 明朝", serif;
+}
+
+a {
+  /*下線を消す*/
+  text-decoration: none;
+  /*色を消す*/
+  color: inherit;
+  transition: 0.3s;
+}
+a:hover {
+  opacity: 0.5;
+}
+
+ul {
+  /*左の「・」を消す*/
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+  border: none;
+}
+body {
+  background-color: #e8d9bf;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.pc_nav ul {
+  display: flex;
+  gap: 55px;
+}
+.pc_nav ul li {
+  width: 105px;
+
+  /*揃え位置を指定*/
+  text-align: center;
+
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: "Hiragino Sans W3", "Hiragino Kaku Gothic ProN",
+    "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic",
+    sans-serif;
+}
+.header_logo {
+  width: 226px;
+}
+
+.header_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 7% 0 3%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/*headerここまで*/
+
+.main {
+  max-width: 1920px;
+}
+
+main > section {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/*メイントップエリア*/
+
+.main_top {
+  text-align: center;
+  width: 100%;
+  margin-top: 107px;
+}
+
+.font_size_1 {
+  font-size: 30px;
+  white-space: nowrap;
+  font-weight: 100;
+}
+.font_size_2 {
+  font-size: 82px;
+  line-height: 1.17;
+  padding: 58px;
+  white-space: nowrap;
+  font-weight: 300;
+}
+
+.font_size_3 {
+  font-size: 23px;
+  white-space: nowrap;
+  padding-bottom: 102px;
+  font-feature-settings: "palt";
+  line-height: 1.65;
+}
+.br_sp {
+  display: none;
+}
+/*ABOUT USエリア*/
+
+.about_us_title_img {
+  max-width: 500px;
+
+  border-bottom-right-radius: 82px;
+}
+
+.about_us_logo {
+  height: 78px;
+  white-space: nowrap;
+  padding-left: 81px;
+}
+
+.about_us ul {
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+}
+.about_us li {
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.about_us h3 {
+  font-size: 44px;
+  line-height: 1.38;
+  white-space: nowrap;
+  font-weight: 200;
+  padding-left: 81px;
+  margin-top: 61px;
+  margin-bottom: 44px;
+}
+
+.about_us p {
+  font-size: 16px;
+  line-height: 1.62;
+  white-space: nowrap;
+  padding-left: 81px;
+  font-feature-settings: "palt";
+}
+
+.about_us_pc {
+  display: block;
+}
+.about_us_sp {
+  display: none;
+}
+.about_us_pc_p {
+  display: block;
+}
+
+.about_us_sp_p {
+  display: none;
+}
+
+.about_us_title_pc {
+  display: block;
+}
+
+.about_us_title_sp {
+  display: none;
+}
+
+/*MENUエリア*/
+h2 {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.menu_title_logo {
+  width: auto;
+  padding-top: 110px;
+  padding-bottom: 50px;
+  height: 78px;
+}
+
+.menu_img {
+  max-width: 300px;
+  max-height: 200px;
+  border-top-right-radius: 42px;
+  margin: 0 auto;
+  position: absolute;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.menu li {
+  padding-left: 10px;
+  padding-right: 40px;
+}
+
+.menu h3 {
+  color: #d30202;
+  font-size: 38px;
+  font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+    "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+    "ＭＳ 明朝", serif;
+  font-weight: lighter;
+  margin-top: 189px;
+  margin-bottom: 25px;
+  position: relative;
+  width: 300px;
+}
+
+.menu p {
+  font-feature-settings: "palt";
+  font-size: 17px;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+/*GARRERYエリア*/
+/*疑問点：ここだけ1920pxの画面いっぱいにしたいが、
+menu>sectionのmaxwidth1000pxが効いていて大きくならない*/
+/*.gallery > section {
+  max-width: 1920px;
+  margin: 0 auto;
+}と、menu>sectionを打ち消すような記述をしてみたがうまくいかない。
+また、画像が横並びにならない*/
+
+.gallery_title_logo {
+  height: 78px;
+  padding-top: 110px;
+  padding-bottom: 27px;
+}
+
+.gallery_img_pc ul {
+  display: flex;
+  margin: 0;
+}
+
+.gallery_img_pc li {
+  margin: 0 auto;
+}
+.gallery_img_pc {
+  width: 100%;
+  max-height: 300px;
+  height: auto;
+}
+.gallery_img_sp {
+  display: none;
+}
+
+/*EVENTエリア*/
+
+.event {
+  width: 100%;
+  text-align: center;
+}
+.event_title_logo {
+  height: 78px;
+  padding-top: 110px;
+  padding-bottom: 47px;
+}
+
+.event ul {
+  background-color: white;
+  flex-wrap: wrap;
+  border: solid 3px #4f260b;
+  font-size: 23px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 0px;
+  max-width: 1000px;
+  max-height: 200px;
+  box-sizing: border-box;
+}
+
+.event li {
+  display: flex;
+  padding-bottom: 21px;
+}
+li:last-child {
+  padding-bottom: 0px;
+}
+
+.event p {
+  padding-left: 160px;
+  padding-right: 60px;
+}
+
+.event a {
+  font-size: 23px;
+  border-bottom: 2px solid #4f260b;
+  white-space: nowrap;
+}
+.event_pc_p {
+  display: block;
+}
+.event_pc_a {
+  display: block;
+}
+.event_sp_p {
+  display: none;
+}
+.event_sp_a {
+  display: none;
+}
+.event_pc ul {
+  display: block;
+}
+.envent_sp ul {
+  display: none;
+}
+
+/*ACCESSエリア*/
+
+/*疑問点：ここだけ1920pxの画面いっぱいにしたいが、
+menu>sectionのmaxwidth1000pxが効いていて大きくならない*/
+.access_title_logo {
+  height: 78px;
+  white-space: nowrap;
+  padding-top: 110px;
+  padding-bottom: 47px;
+}
+
+iframe {
+  display: block;
+  width: 100%;
+
+  height: 472px;
+}
+/*フッターエリア*/
+footer {
+  background-color: white;
+}
+footer ul {
+  display: flex;
+  padding-left: 100px;
+
+  margin-bottom: 50px;
+}
+footer li {
+  width: 218px;
+  white-space: nowrap;
+  padding: 82px 32px;
+}
+
+footer p {
+  margin-right: 829px;
+
+  font-size: 20px;
+
+  padding-bottom: 20px;
+}
+
+.footer_logo img {
+  width: 218px;
+  margin: 0;
+}
+
+footer a {
+  position: fixed;
+  padding-top: 38px;
+  padding-left: 1250px; /*疑問点：この値の決め方が分からない現在適当値
+  イラレの見本で測った(1486padding-leftからaの38pxを引いた数)の値を入れると消えてしまう*/
+  bottom: 230px;
+  width: 128px;
+}
+
+.copyright p {
+  text-align: center;
+  white-space: nowrap;
+  padding-bottom: 80px;
+  width: 100%;
+}
+
+/*スマホ版メニュー*/
+.sp_nav,
+.sp_btn {
+  display: none;
+}
+
+@media screen and (max-width: 1100px) {
+  .pc_nav {
+    display: none;
+  }
+  .sp_btn {
+    display: block;
+    height: 23px;
+    cursor: pointer;
+    /*重なり具合*/
+    z-index: 2;
+  }
+  .sp_btn span {
+    display: block;
+    width: 33px;
+    height: 3px;
+    border-radius: 2px;
+    background: #fff;
+    /*位置の調整*/
+    position: relative;
+    top: 10px;
+    /*ボタンの変化*/
+    transition: 0.3s;
+  }
+
+  .sp_btn span::before,
+  .sp_btn span::after {
+    content: "";
+    display: block;
+    width: 33px;
+    height: 3px;
+    border-radius: 2px;
+    background: #fff;
+    /*位置の調整*/
+    position: absolute;
+    transition: 0.3s;
+  }
+  .sp_btn span::before {
+    bottom: 10px;
+  }
+  .sp_btn span::after {
+    top: 10px;
+  }
+
+  /*ばつ印*/
+  .sp_btn.open span {
+    background: transparent;
+  }
+  .sp_btn.open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+  .sp_btn.open span::after {
+    top: 0;
+    transform: rotate(135deg);
+  }
+  /*メニューの見た目*/
+  .sp_nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /*デバイスの高さ１００％*/
+    background: rgba(0, 0, 0, 0.8);
+    /*重なり具合の調節*/
+    z-index: 1;
+  }
+  .sp_nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .sp_nav li {
+    padding: 20px;
+    color: #fff;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+      "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    font-size: 18px;
+  }
+
+  picture {
+    max-width: 1100px;
+    width: 100%;
+  }
+  /*maintopエリア*/
+  .main_top {
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .font_size_1 {
+    font-size: 24px;
+    white-space: nowrap;
+    font-weight: 100;
+    padding-top: 40px;
+  }
+  .font_size_2 {
+    font-size: 45px;
+    line-height: 1.15;
+    padding: 32px;
+    white-space: nowrap;
+    font-weight: 300;
+    max-width: 300px;
+    width: 100%;
+    padding-left: 0px;
+    text-align: center;
+  }
+
+  .font_size_3 {
+    text-align: center;
+    font-size: 23px;
+    width: 100%;
+    white-space: nowrap;
+    padding-bottom: 68px;
+    font-feature-settings: "palt";
+    line-height: 1.8;
+  }
+  .br_sp {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /*疑問点：
+・トップのハッピーに〜が右に寄ります。
+（paddingleftを0pxにしていますが、意味がないのでしょうか。）
+・画面いっぱいに指定すべき画像が広げられないです。
+（アバウトアス、ギャラリー、アクセスの地図:max-width: 767px;
+    width: 100%;）
+・他の画像も小さすぎる様な気がします（maxwidth300pxで指定）
+menuの画像が色々やってみてもこのように重なってしまします。
+ヒントをいただきたいです。
+・eventのsp部分だけ表示したいのですが、
+文字は消えても白地の枠線の四角が消えません。
+
+※footerはまだやっていませんのでこれからやります。
+その上部の不明点が多すぎる為、一旦質問させていただきました。
+  */
+
+  picture {
+    max-width: 767px;
+    width: 100%;
+  }
+
+  main > section {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  /*maintopエリア*/
+  .main_top {
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+  }
+  .font_size_1 {
+    font-size: 17px;
+    white-space: nowrap;
+    font-weight: 100;
+  }
+  .font_size_2 {
+    font-size: 38px;
+    line-height: 1.15;
+    padding: 32px;
+    white-space: nowrap;
+    font-weight: 300;
+    max-width: 300px;
+    width: 100%;
+    padding-left: 0px;
+    text-align: center;
+  }
+
+  .font_size_3 {
+    text-align: center;
+    font-size: 16px;
+    width: 100%;
+    white-space: nowrap;
+    padding-bottom: 68px;
+    font-feature-settings: "palt";
+    line-height: 1.8;
+  }
+  .br_sp {
+    display: block;
+  }
+
+  /*aboutusエリア*/
+
+  .about_us_logo {
+    height: 47px;
+    padding-left: 28px;
+    text-align: center;
+  }
+  .about_us_title_img {
+    max-width: 300px;
+    width: 100%;
+  }
+
+  .about_us ul {
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .about_us li {
+    white-space: nowrap;
+    margin: 0 auto;
+  }
+
+  .about_us h3 {
+    font-size: 36px;
+    line-height: 1.25;
+    white-space: nowrap;
+    font-weight: 200;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-left: 0px;
+  }
+
+  .about_us p {
+    font-size: 16px;
+    line-height: 1.62;
+    white-space: nowrap;
+    padding-left: 0px;
+    margin: 0 auto;
+    font-feature-settings: "palt";
+  }
+  .about_us_title_img {
+    border-bottom-right-radius: 0px;
+    margin: 0 auto;
+    max-width: 767px;
+    width: 100%;
+  }
+
+  .about_us_pc {
+    display: none;
+  }
+  .about_us_sp {
+    display: block;
+  }
+  .about_us_pc_p {
+    display: none;
+  }
+
+  .about_us_sp_p {
+    display: block;
+    padding: 0px;
+  }
+
+  .about_us_title_sp {
+    display: block;
+    padding-bottom: 19px;
+  }
+
+  .about_us_title_pc {
+    display: none;
+  }
+
+  /*menuエリア*/
+  .menu_title_logo {
+    width: auto;
+    padding-top: 110px;
+    padding-bottom: 50px;
+    height: 47px;
+  }
+
+  .menu_img {
+    max-width: 300px;
+    max-height: 200px;
+    border-top-right-radius: 42px;
+    margin: 0 auto;
+    position: absolute;
+  }
+
+  .menu h3 {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    width: 300px;
+  }
+
+  .menu p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  /*galleryエリア*/
+  .gallery_img_sp {
+    display: block;
+    max-width: 767px;
+    width: 100%;
+  }
+  .gallery_img_pc {
+    display: none;
+  }
+
+  .gallery_title_logo {
+    height: 47px;
+  }
+  /*eventエリア*/
+  .event_title_logo {
+    height: 47px;
+  }
+
+  .event ul {
+    padding: 28px 0px;
+  }
+  .event li {
+    flex-wrap: wrap;
+  }
+
+  .event p {
+    font-size: 16px;
+    padding-left: 28px;
+  }
+
+  .event a {
+    font-size: 16px;
+    margin-left: 28px;
+  }
+
+  .event_pc ul {
+    display: none;
+  }
+  .envent_sp ul {
+    display: block;
+  }
+
+  .event_pc_p {
+    display: none;
+  }
+  .event_pc_a {
+    display: none;
+  }
+  .event_sp_p {
+    display: block;
+  }
+  .event_sp_a {
+    display: block;
+  }
+  /*accesエリア*/
+  .access_title_logo {
+    height: 47px;
+  }
+
+  .iframe {
+    max-width: 767px;
+    height: 192px;
+    width: 100%;
+  }
+  /*footerエリア*/
+
+  footer ul {
+    padding-left: 0;
+  }
+  .footer_logo {
+    padding-top: 48px;
+    height: 36px;
+  }
+
+  footer li {
+    padding-top: 24px;
+    padding-left: 20px;
+    padding-bottom: 33px;
+  }
+
+  footer p {
+    margin: 0 auto;
+  }
+  footer a {
+    max-width: 767px;
+    padding-top: 17px;
+    padding-right: 20px;
+    width: 100px;
+  }
+}
