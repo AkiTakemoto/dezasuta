@@ -258,7 +258,7 @@ menu>sectionのmaxwidth1000pxが効いていて大きくならない*/
   padding-bottom: 27px;
 }
 
-.gallery_img_pc ul {
+.gallery_img_pc {
   display: flex;
   margin: 0;
 }
@@ -273,6 +273,11 @@ menu>sectionのmaxwidth1000pxが効いていて大きくならない*/
 }
 .gallery_img_sp {
   display: none;
+}
+
+main > section.gallery_slider,
+main > section.access {
+  max-width: 100%;
 }
 
 /*EVENTエリア*/
@@ -317,24 +322,6 @@ li:last-child {
   font-size: 23px;
   border-bottom: 2px solid #4f260b;
   white-space: nowrap;
-}
-.event_pc_p {
-  display: block;
-}
-.event_pc_a {
-  display: block;
-}
-.event_sp_p {
-  display: none;
-}
-.event_sp_a {
-  display: none;
-}
-.event_pc ul {
-  display: block;
-}
-.envent_sp ul {
-  display: none;
 }
 
 /*ACCESSエリア*/
@@ -665,30 +652,23 @@ menuの画像が色々やってみてもこのように重なってしましま�
 
   /*menuエリア*/
   .menu_title_logo {
-    width: auto;
-    padding-top: 110px;
-    padding-bottom: 50px;
     height: 47px;
-  }
-
-  .menu_img {
-    max-width: 300px;
-    max-height: 200px;
-    border-top-right-radius: 42px;
-    margin: 0 auto;
-    position: absolute;
   }
 
   .menu h3 {
     margin-top: 0px;
     margin-bottom: 20px;
-    width: 300px;
   }
 
   .menu p {
     font-size: 13px;
     line-height: 1.5;
   }
+
+  .menu ul {
+    flex-direction: column;
+  }
+
   /*galleryエリア*/
   .gallery_img_sp {
     display: block;
