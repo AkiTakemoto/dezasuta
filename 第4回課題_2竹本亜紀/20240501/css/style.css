@@ -138,7 +138,6 @@ main > section {
 .about_us_logo {
   height: 78px;
   white-space: nowrap;
-  padding-left: 81px;
 }
 
 .about_us ul {
@@ -156,7 +155,7 @@ main > section {
   line-height: 1.38;
   white-space: nowrap;
   font-weight: 200;
-  padding-left: 81px;
+  text-align: center;
   margin-top: 61px;
   margin-bottom: 44px;
 }
@@ -165,7 +164,6 @@ main > section {
   font-size: 16px;
   line-height: 1.62;
   white-space: nowrap;
-  padding-left: 81px;
   font-feature-settings: "palt";
 }
 
@@ -204,12 +202,15 @@ h2 {
   height: 78px;
 }
 
+.menu li div {
+  position: relative;
+}
+
 .menu_img {
   max-width: 300px;
   max-height: 200px;
   border-top-right-radius: 42px;
   margin: 0 auto;
-  position: absolute;
 }
 
 .menu ul {
@@ -221,6 +222,7 @@ h2 {
 .menu li {
   padding-left: 10px;
   padding-right: 40px;
+  width: 30%;
 }
 
 .menu h3 {
@@ -230,28 +232,20 @@ h2 {
     "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
     "ＭＳ 明朝", serif;
   font-weight: lighter;
-  margin-top: 189px;
-  margin-bottom: 25px;
-  position: relative;
+  top: 90%;
+  left: 0;
+  position: absolute;
   width: 300px;
 }
 
 .menu p {
+  margin-top: 50px;
   font-feature-settings: "palt";
   font-size: 17px;
   line-height: 1.4;
-  white-space: nowrap;
 }
 
 /*GARRERYエリア*/
-/*疑問点：ここだけ1920pxの画面いっぱいにしたいが、
-menu>sectionのmaxwidth1000pxが効いていて大きくならない*/
-/*.gallery > section {
-  max-width: 1920px;
-  margin: 0 auto;
-}と、menu>sectionを打ち消すような記述をしてみたがうまくいかない。
-また、画像が横並びにならない*/
-
 .gallery_title_logo {
   height: 78px;
   padding-top: 110px;
@@ -276,7 +270,8 @@ menu>sectionのmaxwidth1000pxが効いていて大きくならない*/
 }
 
 main > section.gallery_slider,
-main > section.access {
+main > section.access,
+main > section.event {
   max-width: 100%;
 }
 
@@ -299,10 +294,12 @@ main > section.access {
   font-size: 23px;
   padding-top: 40px;
   padding-bottom: 40px;
-  padding-left: 0px;
+  padding-left: 35px;
   max-width: 1000px;
   max-height: 200px;
   box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .event li {
@@ -325,9 +322,6 @@ li:last-child {
 }
 
 /*ACCESSエリア*/
-
-/*疑問点：ここだけ1920pxの画面いっぱいにしたいが、
-menu>sectionのmaxwidth1000pxが効いていて大きくならない*/
 .access_title_logo {
   height: 78px;
   white-space: nowrap;
@@ -359,9 +353,7 @@ footer li {
 
 footer p {
   margin-right: 829px;
-
   font-size: 20px;
-
   padding-bottom: 20px;
 }
 
@@ -370,11 +362,10 @@ footer p {
   margin: 0;
 }
 
-footer a {
+.footer_a {
   position: fixed;
   padding-top: 38px;
-  padding-left: 1250px; /*疑問点：この値の決め方が分からない現在適当値
-  イラレの見本で測った(1486padding-leftからaの38pxを引いた数)の値を入れると消えてしまう*/
+  padding-left: 80%;
   bottom: 230px;
   width: 128px;
 }
@@ -479,27 +470,14 @@ footer a {
     width: 100%;
   }
   /*maintopエリア*/
-  .main_top {
-    max-width: 300px;
-    width: 100%;
-    text-align: center;
-    margin: 0 auto;
-  }
   .font_size_1 {
     font-size: 24px;
-    white-space: nowrap;
-    font-weight: 100;
     padding-top: 40px;
   }
   .font_size_2 {
     font-size: 45px;
     line-height: 1.15;
-    padding: 32px;
-    white-space: nowrap;
-    font-weight: 300;
-    max-width: 300px;
-    width: 100%;
-    padding-left: 0px;
+    padding: 32px 0;
     text-align: center;
   }
 
@@ -518,22 +496,6 @@ footer a {
 }
 
 @media screen and (max-width: 767px) {
-  /*疑問点：
-・トップのハッピーに〜が右に寄ります。
-（paddingleftを0pxにしていますが、意味がないのでしょうか。）
-・画面いっぱいに指定すべき画像が広げられないです。
-（アバウトアス、ギャラリー、アクセスの地図:max-width: 767px;
-    width: 100%;）
-・他の画像も小さすぎる様な気がします（maxwidth300pxで指定）
-menuの画像が色々やってみてもこのように重なってしまします。
-ヒントをいただきたいです。
-・eventのsp部分だけ表示したいのですが、
-文字は消えても白地の枠線の四角が消えません。
-
-※footerはまだやっていませんのでこれからやります。
-その上部の不明点が多すぎる為、一旦質問させていただきました。
-  */
-
   picture {
     max-width: 767px;
     width: 100%;
@@ -541,38 +503,24 @@ menuの画像が色々やってみてもこのように重なってしましま�
 
   main > section {
     max-width: 300px;
-    margin: 0 auto;
   }
   /*maintopエリア*/
-  .main_top {
-    max-width: 300px;
-    width: 100%;
-    text-align: center;
-  }
   .font_size_1 {
     font-size: 17px;
-    white-space: nowrap;
-    font-weight: 100;
+    padding-top: 0;
   }
   .font_size_2 {
-    font-size: 38px;
+    font-size: 32px;
     line-height: 1.15;
-    padding: 32px;
-    white-space: nowrap;
-    font-weight: 300;
-    max-width: 300px;
-    width: 100%;
-    padding-left: 0px;
-    text-align: center;
   }
 
   .font_size_3 {
     text-align: center;
     font-size: 16px;
     width: 100%;
-    white-space: nowrap;
-    padding-bottom: 68px;
-    font-feature-settings: "palt";
+
+    padding-bottom: 40px;
+
     line-height: 1.8;
   }
   .br_sp {
@@ -583,7 +531,8 @@ menuの画像が色々やってみてもこのように重なってしましま�
 
   .about_us_logo {
     height: 47px;
-    padding-left: 28px;
+    padding-top: 57px;
+    padding-bottom: 26px;
     text-align: center;
   }
   .about_us_title_img {
@@ -593,31 +542,27 @@ menuの画像が色々やってみてもこのように重なってしましま�
 
   .about_us ul {
     flex-wrap: wrap;
-    margin: 0 auto;
     width: 100%;
-  }
-  .about_us li {
-    white-space: nowrap;
     margin: 0 auto;
   }
 
-  .about_us h3 {
-    font-size: 36px;
-    line-height: 1.25;
+  .about_us li {
     white-space: nowrap;
-    font-weight: 200;
+    width: 100%;
+  }
+
+  .about_us h3 {
+    font-size: 32px;
+    line-height: 1.25;
     margin-top: 30px;
     margin-bottom: 30px;
     padding-left: 0px;
   }
 
   .about_us p {
-    font-size: 16px;
-    line-height: 1.62;
-    white-space: nowrap;
+    font-size: 15px;
     padding-left: 0px;
     margin: 0 auto;
-    font-feature-settings: "palt";
   }
   .about_us_title_img {
     border-bottom-right-radius: 0px;
@@ -653,6 +598,8 @@ menuの画像が色々やってみてもこのように重なってしましま�
   /*menuエリア*/
   .menu_title_logo {
     height: 47px;
+    padding-top: 57px;
+    padding-bottom: 26px;
   }
 
   .menu h3 {
@@ -663,10 +610,16 @@ menuの画像が色々やってみてもこのように重なってしましま�
   .menu p {
     font-size: 13px;
     line-height: 1.5;
+    margin-top: 32px;
+    padding-bottom: 60px;
   }
 
   .menu ul {
     flex-direction: column;
+  }
+
+  .menu li {
+    width: 100%;
   }
 
   /*galleryエリア*/
@@ -675,57 +628,49 @@ menuの画像が色々やってみてもこのように重なってしましま�
     max-width: 767px;
     width: 100%;
   }
+
+  .gallery_img_sp img {
+    width: 100%;
+  }
   .gallery_img_pc {
     display: none;
   }
 
   .gallery_title_logo {
     height: 47px;
+    padding-top: 25px;
   }
   /*eventエリア*/
   .event_title_logo {
     height: 47px;
+    padding-top: 34px;
+    padding-bottom: 19px;
   }
 
   .event ul {
     padding: 28px 0px;
+    width: 100%;
   }
   .event li {
     flex-wrap: wrap;
+    padding-bottom: 22px;
   }
 
   .event p {
     font-size: 16px;
-    padding-left: 28px;
+    padding-left: 15px;
   }
 
   .event a {
-    font-size: 16px;
-    margin-left: 28px;
+    font-size: 15px;
+    margin-left: 15px;
   }
 
-  .event_pc ul {
-    display: none;
-  }
-  .envent_sp ul {
-    display: block;
-  }
-
-  .event_pc_p {
-    display: none;
-  }
-  .event_pc_a {
-    display: none;
-  }
-  .event_sp_p {
-    display: block;
-  }
-  .event_sp_a {
-    display: block;
-  }
   /*accesエリア*/
   .access_title_logo {
     height: 47px;
+    padding-top: 34px;
+    padding-bottom: 13px;
   }
 
   .iframe {
@@ -737,25 +682,32 @@ menuの画像が色々やってみてもこのように重なってしましま�
 
   footer ul {
     padding-left: 0;
+    flex-direction: column;
   }
   .footer_logo {
-    padding-top: 48px;
-    height: 36px;
+    padding-top: 30px;
+    height: 26px;
+    padding-left: 5px;
   }
 
   footer li {
-    padding-top: 24px;
-    padding-left: 20px;
+    padding-top: 20px;
+    padding-left: 10px;
     padding-bottom: 33px;
   }
 
   footer p {
     margin: 0 auto;
+    padding: 5px;
+    font-size: 16px;
   }
-  footer a {
-    max-width: 767px;
-    padding-top: 17px;
-    padding-right: 20px;
-    width: 100px;
+  .footer_a {
+    padding-left: 70%;
+    top: 480px;
+  }
+
+  .copyright p {
+    padding-top: 0px;
+    padding-bottom: 34px;
   }
 }

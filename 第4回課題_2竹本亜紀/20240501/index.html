@@ -80,9 +80,11 @@
                         <h3>私たちが提供する<br>
                             こだわりのコーヒー
                         </h3>
+                        <!--疑問点：これ以下の記述末尾をbrに変えたらエラーになります。これもpcとspを分けるやり方ではなく、<br class
+    ="〇〇_sp">をスマホの改行部分に入れ込みCSSでdisplay:none;かblockで表示する様にしたらいいのでしょうか。これもやってみたもののうまくいきませんでした。-->
+                        <!--こんな感じです。<p class="about_us_pc_p">サービスを提供する上での想いや心かけているこ<br class="about_us_sp_p"となど、メッ<br></p>-->
 
-                        <p class="about_us_pc_p">
-                            サービスを提供する上での想いや心かけていることなど、メッ</p>
+                        <p class="about_us_pc_p">サービスを提供する上での想いや心かけていることなど、メッ</p>
                         <p class="about_us_pc_p">セージを文章で紹介します。サービスを提供する上での想い</p>
                         <p class="about_us_pc_p">や心かけていることなど、メッセージを文章で紹介します。サー</p>
                         <p class="about_us_pc_p">ビスを提供する上での想いや心かけていることなど、メッセー</p>
@@ -111,26 +113,32 @@
                 </h2>
                 <ul>
                     <li>
-                        <img class="menu_img" src="images/pc_menu_drink-100.jpg" alt="ドリンクの画像">
-                        <h3>Drink</h3>
-                        <p>ドリンクメニューの概要を100文字程度で</p>
-                        <p>紹介します。素材やこだわりなどをアピー</p>
-                        <p>ルしていきます。</p>
+                        <div>
+                            <img class="menu_img" src="images/pc_menu_drink-100.jpg" alt="ドリンクの画像">
+                            <h3>Drink</h3>
+                        </div>
+                        <p>ドリンクメニューの概要を100文字程度で
+                            紹介します。素材やこだわりなどをアピー
+                            ルしていきます。</p>
                     </li>
                     <li>
-                        <img class="menu_img" src="images/pc_menu_food-100.jpg" alt="フードの画像">
-                        <h3>Food</h3>
+                        <div>
+                            <img class="menu_img" src="images/pc_menu_food-100.jpg" alt="フードの画像">
+                            <h3>Food</h3>
+                        </div>
                         <p>フードメニューの概要を100文字程度で紹
-                        <p>介します。素材やこだわりなどをアピールし</p>
-                        <p>ていきます。</p>
+                            介します。素材やこだわりなどをアピールし
+                            ていきます。
                         </p>
                     </li>
                     <li>
-                        <img class="menu_img" src="images/pc_menu_sweets-100.jpg" alt="スイーツの画像">
-                        <h3>Sweets</h3>
-                        <p>スイーツメニューの概要を100文字程度で</p>
-                        <p>紹介します。素材やこだわりなどをアピー</p>
-                        <p>ルしていきます。</p>
+                        <div>
+                            <img class="menu_img" src="images/pc_menu_sweets-100.jpg" alt="スイーツの画像">
+                            <h3>Sweets</h3>
+                        </div>
+                        <p>スイーツメニューの概要を100文字程度で
+                            紹介します。素材やこだわりなどをアピー
+                            ルしていきます。</p>
                     </li>
                 </ul>
             </section>
@@ -208,7 +216,8 @@
                 <p>MAIL:info@designcafe.tokyo</p>
             </li>
         </ul>
-        <div>
+        <!--スマホ版のページトップ画像の大きさの変え方が分かりませんでした。もう少し小さくしたいです。-->
+        <div class="footer_a">
             <a href="#head">
                 <img src="images/to_top@2x.png" alt="ページトップへの画像">
             </a>
