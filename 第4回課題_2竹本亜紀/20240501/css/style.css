@@ -23,6 +23,7 @@ li {
   font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
     "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
     "ＭＳ 明朝", serif;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -117,25 +118,32 @@ main > section {
   font-weight: 300;
 }
 
-.font_size_3 {
+.font_size_pc_3 {
   font-size: 23px;
-  white-space: nowrap;
+  margin: 0 auto;
   padding-bottom: 102px;
   font-feature-settings: "palt";
   line-height: 1.65;
+  flex-wrap: wrap;
+  max-width: 841px;
 }
-.br_sp {
+
+.font_size_sp_3 {
   display: none;
 }
+
 /*ABOUT USエリア*/
 
-.about_us_title_img {
-  max-width: 500px;
+/*疑問：前回解説いただいた通りにimg画像を50%で入れると画像サイズがとても小さくなります
+また、このエリアがmargin 0 autoを入れても中央揃えにならないです*/
 
+.about_us_title_img {
   border-bottom-right-radius: 82px;
+  width: 50%;
 }
 
 .about_us_logo {
+  padding-top: 12%;
   height: 78px;
   white-space: nowrap;
 }
@@ -143,28 +151,35 @@ main > section {
 .about_us ul {
   display: flex;
   margin: 0 auto;
-  width: 100%;
 }
 .about_us li {
   margin: 0 auto;
-  flex-wrap: wrap;
+  width: 40%;
 }
 
 .about_us h3 {
-  font-size: 44px;
+  font-size: 40px;
   line-height: 1.38;
   white-space: nowrap;
   font-weight: 200;
-  text-align: center;
-  margin-top: 61px;
-  margin-bottom: 44px;
+  margin-left: 5%;
+  margin-top: 58px;
+  margin-bottom: 40px;
+  max-width: 43%;
 }
 
 .about_us p {
   font-size: 16px;
   line-height: 1.62;
-  white-space: nowrap;
+  margin-left: 8%;
   font-feature-settings: "palt";
+  display: block;
+  text-align: left;
+
+  margin-left: 5%;
+  height: 78px;
+  flex-wrap: wrap;
+  padding-bottom: 108px;
 }
 
 .about_us_pc {
@@ -173,16 +188,14 @@ main > section {
 .about_us_sp {
   display: none;
 }
-.about_us_pc_p {
-  display: block;
-}
-
-.about_us_sp_p {
-  display: none;
-}
 
 .about_us_title_pc {
   display: block;
+  text-align: left;
+  max-width: 100%;
+  margin-left: 5%;
+  height: 78px;
+  white-space: nowrap;
 }
 
 .about_us_title_sp {
@@ -221,7 +234,7 @@ h2 {
 
 .menu li {
   padding-left: 10px;
-  padding-right: 40px;
+  padding-right: 25px;
   width: 30%;
 }
 
@@ -252,19 +265,19 @@ h2 {
   padding-bottom: 27px;
 }
 
-.gallery_img_pc {
-  display: flex;
-  margin: 0;
-}
-
 .gallery_img_pc li {
   margin: 0 auto;
 }
 .gallery_img_pc {
+  display: flex;
+
   width: 100%;
   max-height: 300px;
   height: auto;
+  text-align: center;
+  margin: 0 auto;
 }
+
 .gallery_img_sp {
   display: none;
 }
@@ -341,8 +354,8 @@ footer {
 }
 footer ul {
   display: flex;
-  padding-left: 100px;
-
+  padding-left: 100px 0px;
+  margin-left: 20px;
   margin-bottom: 50px;
 }
 footer li {
@@ -352,7 +365,6 @@ footer li {
 }
 
 footer p {
-  margin-right: 829px;
   font-size: 20px;
   padding-bottom: 20px;
 }
@@ -475,7 +487,7 @@ footer p {
     padding-top: 40px;
   }
   .font_size_2 {
-    font-size: 45px;
+    font-size: 55px;
     line-height: 1.15;
     padding: 32px 0;
     text-align: center;
@@ -485,7 +497,7 @@ footer p {
     text-align: center;
     font-size: 23px;
     width: 100%;
-    white-space: nowrap;
+
     padding-bottom: 68px;
     font-feature-settings: "palt";
     line-height: 1.8;
@@ -510,21 +522,23 @@ footer p {
     padding-top: 0;
   }
   .font_size_2 {
-    font-size: 32px;
+    font-size: 34px;
     line-height: 1.15;
   }
 
-  .font_size_3 {
+  .font_size_sp_3 {
+    display: block;
     text-align: center;
-    font-size: 16px;
+    font-size: 17px;
     width: 100%;
-
+    max-width: 360px;
     padding-bottom: 40px;
-
+    margin: 0 auto;
     line-height: 1.8;
   }
-  .br_sp {
-    display: block;
+
+  .font_size_pc_3 {
+    display: none;
   }
 
   /*aboutusエリア*/
@@ -547,7 +561,7 @@ footer p {
   }
 
   .about_us li {
-    white-space: nowrap;
+    flex-wrap: wrap;
     width: 100%;
   }
 
@@ -557,12 +571,18 @@ footer p {
     margin-top: 30px;
     margin-bottom: 30px;
     padding-left: 0px;
+    margin-left: 0%;
   }
 
   .about_us p {
-    font-size: 15px;
+    font-size: 16px;
     padding-left: 0px;
     margin: 0 auto;
+    display: block;
+    padding: 0px;
+    max-width: 335px;
+    width: 100%;
+    padding-bottom: 150px;
   }
   .about_us_title_img {
     border-bottom-right-radius: 0px;
@@ -576,14 +596,6 @@ footer p {
   }
   .about_us_sp {
     display: block;
-  }
-  .about_us_pc_p {
-    display: none;
-  }
-
-  .about_us_sp_p {
-    display: block;
-    padding: 0px;
   }
 
   .about_us_title_sp {
@@ -608,7 +620,7 @@ footer p {
   }
 
   .menu p {
-    font-size: 13px;
+    font-size: 16px;
     line-height: 1.5;
     margin-top: 32px;
     padding-bottom: 60px;
@@ -622,8 +634,12 @@ footer p {
     width: 100%;
   }
 
+  .menu li {
+    padding-left: 0px;
+  }
+
   /*galleryエリア*/
-  .gallery_img_sp {
+  .gallery_img_pc {
     display: block;
     max-width: 767px;
     width: 100%;
@@ -631,9 +647,6 @@ footer p {
 
   .gallery_img_sp img {
     width: 100%;
-  }
-  .gallery_img_pc {
-    display: none;
   }
 
   .gallery_title_logo {
@@ -703,11 +716,28 @@ footer p {
   }
   .footer_a {
     padding-left: 70%;
-    top: 480px;
+    top: 580px;
+    width: 18%;
   }
 
   .copyright p {
     padding-top: 0px;
     padding-bottom: 34px;
   }
+}
+
+/*スライダー部分*/
+.slick-dots {
+  bottom: 20px;
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+
+/*どちらも白くする*/
+.slick-dots li.slick-active button:before,
+.slick-dots li button:before {
+  color: #fff;
+  /*後ほどサイズを変更する*/
 }
