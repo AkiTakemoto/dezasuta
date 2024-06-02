@@ -82,17 +82,17 @@
             </div>
             <section class="about_us" id="about_us">
                 <ul>
-                    <li>
+                    <li class="about_us_sp">
                         <h2 class="about_us_title_sp">
                             <img class="about_us_logo" src="images/about_us@2x.png" alt="ABOUT US">
 
                         </h2>
                     </li>
                     <li class="about_us_pc">
-                        <img class="about_us_title_img" src="images/pc_about-100.jpg" alt="コーヒーの画像">
+                        <img class="about_us_title_img_pc" src="images/pc_about-100.jpg" alt="コーヒーの画像">
                     </li>
                     <li class="about_us_sp">
-                        <img class="about_us_title_img" src="images/about_us@2x-100.jpg" alt="コーヒーの画像">
+                        <img class="about_us_title_img_sp" src="images/about_us@2x-100.jpg" alt="コーヒーの画像">
                     </li>
                     <li>
                         <h2 class="about_us_title_pc">
@@ -146,6 +146,7 @@
                 <h2>
                     <img class="gallery_title_logo" src="images/gallery@2x.png" alt="GALLERY">
                 </h2>
+                <div class=".arrow_r"></div>
                 <ul class="gallery_img_pc">
                     <div>
                         <li>
@@ -249,7 +250,7 @@
                 autoplay: true,
                 autoplaySpeed: 4000,
                 dots: false,
-                arrows: false,
+                nextarrows: <div class=".arrow_r"></div>,
                 slidesToShow: 5,
                 slidesToScroll: 1,
                 responsive: [
@@ -265,8 +266,10 @@
                     {
                         breakpoint: 767,
                         settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 2
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            centerMode: true,
+                            centerPadding: '0'
                         }
                     },
                     // 指定したブレイクポイントでslickを無効化するには

@@ -134,12 +134,9 @@ main > section {
 
 /*ABOUT USエリア*/
 
-/*疑問：前回解説いただいた通りにimg画像を50%で入れると画像サイズがとても小さくなります
-また、このエリアがmargin 0 autoを入れても中央揃えにならないです*/
-
 .about_us_title_img {
   border-bottom-right-radius: 82px;
-  width: 50%;
+  width: 100%;
 }
 
 .about_us_logo {
@@ -152,9 +149,14 @@ main > section {
   display: flex;
   margin: 0 auto;
 }
+
 .about_us li {
   margin: 0 auto;
   width: 40%;
+}
+
+.about_us_sp li {
+  display: none;
 }
 
 .about_us h3 {
@@ -185,6 +187,7 @@ main > section {
 .about_us_pc {
   display: block;
 }
+
 .about_us_sp {
   display: none;
 }
@@ -220,8 +223,7 @@ h2 {
 }
 
 .menu_img {
-  max-width: 300px;
-  max-height: 200px;
+  max-width: 100%;
   border-top-right-radius: 42px;
   margin: 0 auto;
 }
@@ -267,19 +269,38 @@ h2 {
 
 .gallery_img_pc li {
   margin: 0 auto;
+  height: auto;
 }
 .gallery_img_pc {
   display: flex;
-
   width: 100%;
   max-height: 300px;
   height: auto;
   text-align: center;
   margin: 0 auto;
 }
-
 .gallery_img_sp {
   display: none;
+}
+
+.arrow_r {
+  position: relative;
+  display: inline-block;
+  padding-left: 20px;
+}
+.arrow_r:before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border: 0;
+  border-top: solid 2px #fff;
+  border-right: solid 2px #fff;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 main > section.gallery_slider,
@@ -319,13 +340,13 @@ main > section.event {
   display: flex;
   padding-bottom: 21px;
 }
-li:last-child {
+.event li:last-child {
   padding-bottom: 0px;
 }
 
 .event p {
-  padding-left: 160px;
-  padding-right: 60px;
+  margin-left: 30px;
+  margin-right: 40px;
 }
 
 .event a {
@@ -345,7 +366,7 @@ li:last-child {
 iframe {
   display: block;
   width: 100%;
-
+  border: none;
   height: 472px;
 }
 /*フッターエリア*/
@@ -386,7 +407,6 @@ footer p {
   text-align: center;
   white-space: nowrap;
   padding-bottom: 80px;
-  width: 100%;
 }
 
 /*スマホ版メニュー*/
@@ -563,6 +583,11 @@ footer p {
   .about_us li {
     flex-wrap: wrap;
     width: 100%;
+    display: block;
+  }
+
+  .about_us_pc_img {
+    display: none;
   }
 
   .about_us h3 {
@@ -584,18 +609,19 @@ footer p {
     width: 100%;
     padding-bottom: 150px;
   }
-  .about_us_title_img {
+  .about_us_title_img_sp {
     border-bottom-right-radius: 0px;
     margin: 0 auto;
     max-width: 767px;
     width: 100%;
   }
 
-  .about_us_pc {
+  .about_us_title_img_pc {
     display: none;
   }
-  .about_us_sp {
-    display: block;
+
+  .about_us_pc {
+    display: none;
   }
 
   .about_us_title_sp {
@@ -604,6 +630,14 @@ footer p {
   }
 
   .about_us_title_pc {
+    display: none;
+  }
+
+  .about_us_sp li {
+    display: block;
+  }
+
+  .about_us_pc li {
     display: none;
   }
 
@@ -639,14 +673,16 @@ footer p {
   }
 
   /*galleryエリア*/
+
+  /*画像が画面いっぱいになりません*/
   .gallery_img_pc {
     display: block;
-    max-width: 767px;
     width: 100%;
   }
 
-  .gallery_img_sp img {
-    width: 100%;
+  .gallery_img_pc li {
+    margin: 0 auto;
+    max-width: 100%;
   }
 
   .gallery_title_logo {
@@ -654,6 +690,9 @@ footer p {
     padding-top: 25px;
   }
   /*eventエリア*/
+
+  /*スマホ版の時に中央に配置できないです。margin 0 autoとtext-align center
+  をulに入れたり別の場所に入れたりするのですが効きません*/
   .event_title_logo {
     height: 47px;
     padding-top: 34px;
@@ -663,20 +702,32 @@ footer p {
   .event ul {
     padding: 28px 0px;
     width: 100%;
+    text-align: center;
+    margin: 0 auto;
   }
   .event li {
-    flex-wrap: wrap;
-    padding-bottom: 22px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
   }
 
   .event p {
     font-size: 16px;
-    padding-left: 15px;
+    margin: 0;
+    text-align: left;
   }
 
   .event a {
     font-size: 15px;
-    margin-left: 15px;
+    text-decoration: underline;
+    border-bottom: none;
+    text-align: left;
+  }
+
+  .event li:last-child {
+    padding-bottom: 0px;
+    margin-left: 0px;
   }
 
   /*accesエリア*/
